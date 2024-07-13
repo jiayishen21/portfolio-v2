@@ -163,25 +163,4 @@
 			margin-right: 0.4rem;
 		}
 	}
-
-	.flashy-text {
-		font-weight: bold;
-		background: linear-gradient(90deg, #e24acd, #517fff, #e24acd);
-		background-size: 300%;
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		animation: gradientText 2s infinite;
-	}
-
-	@keyframes gradientText {
-		0% {
-			background-position: 0% 50%;
-		}
-		50% {
-			background-position: 100% 50%;
-		}
-		100% {
-			background-position: 0% 50%;
-		}
-	}
 </style>
