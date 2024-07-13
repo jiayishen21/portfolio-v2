@@ -1,5 +1,42 @@
 <script lang="ts">
 	import searchIcon from '$lib/images/search.svg';
+	// import technology icons
+	import jsIcon from '$lib/images/technologies/javascript.svg';
+	import tsIcon from '$lib/images/technologies/typescript.svg';
+	import pythonIcon from '$lib/images/technologies/python.svg';
+	import htmlIcon from '$lib/images/technologies/html.svg';
+	import cssIcon from '$lib/images/technologies/css.svg';
+	import cIcon from '$lib/images/technologies/c.svg';
+	import cppIcon from '$lib/images/technologies/c++.svg';
+	import javaIcon from '$lib/images/technologies/java.svg';
+	import goIcon from '$lib/images/technologies/go.svg';
+	import swiftIcon from '$lib/images/technologies/swift.svg';
+	import sqlIcon from '$lib/images/technologies/sql.svg';
+	import bashscriptIcon from '$lib/images/technologies/bashscript.svg';
+	import reactIcon from '$lib/images/technologies/react.svg';
+	import nodeIcon from '$lib/images/technologies/node.svg';
+	import mongodbIcon from '$lib/images/technologies/mongodb.svg';
+	import postgresIcon from '$lib/images/technologies/postgres.svg';
+	import mysqlIcon from '$lib/images/technologies/mysql.svg';
+	import expressIcon from '$lib/images/technologies/express.svg';
+	import nextIcon from '$lib/images/technologies/next.svg';
+	import angularIcon from '$lib/images/technologies/angular.svg';
+	import svelteIcon from '$lib/images/technologies/svelte.svg';
+	import expoIcon from '$lib/images/technologies/expo.svg';
+	import reduxIcon from '$lib/images/technologies/redux.svg';
+	import djangoIcon from '$lib/images/technologies/django.svg';
+	import flaskIcon from '$lib/images/technologies/flask.svg';
+	import jestIcon from '$lib/images/technologies/jest.svg';
+	import tailwindIcon from '$lib/images/technologies/tailwind.svg';
+	import microservicesIcon from '$lib/images/technologies/microservices.svg';
+	import awsIcon from '$lib/images/technologies/aws.svg';
+	import gcpIcon from '$lib/images/technologies/gcp.svg';
+	import gitIcon from '$lib/images/technologies/git.svg';
+	import dockerIcon from '$lib/images/technologies/docker.svg';
+	import supabaseIcon from '$lib/images/technologies/supabase.svg';
+	import firebaseIcon from '$lib/images/technologies/firebase.svg';
+	import restIcon from '$lib/images/technologies/rest.svg';
+
 	let search = '';
 
 	type Technology = {
@@ -10,30 +47,30 @@
 	};
 	let technologies: Technology[] = [
 		// languages
-		{ name: 'JavaScript', keywords: ['js', 'java', 'script', 'language'], img: 'javascript.svg' },
+		{ name: 'JavaScript', keywords: ['js', 'java', 'script', 'language'], img: jsIcon },
 		{
 			name: 'TypeScript',
 			keywords: ['ts', 'js', 'type', 'script', 'language'],
-			img: 'typescript.svg'
+			img: tsIcon
 		},
-		{ name: 'Python', keywords: ['python', 'py', 'language'], priority: 1, img: 'python.svg' },
-		{ name: 'HTML', keywords: ['html', 'hyper', 'html5', 'language'], img: 'html.svg' },
-		{ name: 'CSS', keywords: ['css', 'cascading', 'style', 'sheets', 'language'], img: 'css.svg' },
-		{ name: 'C', keywords: ['c', 'language'], img: 'c.svg' },
-		{ name: 'C++', keywords: ['c++', 'cpp', 'language'], priority: 1, img: 'c++.svg' },
-		{ name: 'Java', keywords: ['java', 'language'], img: 'java.svg' },
-		{ name: 'Go', keywords: ['go', 'language'], priority: 1, img: 'go.svg' },
-		{ name: 'Swift', keywords: ['swift', 'mobile', 'ios', 'language'], img: 'swift.svg' },
+		{ name: 'Python', keywords: ['python', 'py', 'language'], priority: 1, img: pythonIcon },
+		{ name: 'HTML', keywords: ['html', 'hyper', 'html5', 'language'], img: htmlIcon },
+		{ name: 'CSS', keywords: ['css', 'cascading', 'style', 'sheets', 'language'], img: cssIcon },
+		{ name: 'C', keywords: ['c', 'language'], img: cIcon },
+		{ name: 'C++', keywords: ['c++', 'cpp', 'language'], priority: 1, img: cppIcon },
+		{ name: 'Java', keywords: ['java', 'language'], img: javaIcon },
+		{ name: 'Go', keywords: ['go', 'language'], priority: 1, img: goIcon },
+		{ name: 'Swift', keywords: ['swift', 'mobile', 'ios', 'language'], img: swiftIcon },
 		{
 			name: 'SQL',
 			keywords: ['sql', 'structured', 'query', 'language', 'language'],
 			priority: 1,
-			img: 'sql.svg'
+			img: sqlIcon
 		},
 		{
 			name: 'BashScript',
 			keywords: ['bash', 'shell', 'script', 'language'],
-			img: 'bashscript.svg'
+			img: bashscriptIcon
 		},
 
 		// frameworks
@@ -41,97 +78,97 @@
 			name: 'React',
 			keywords: ['react', 'js', 'java', 'script', 'frontend'],
 			priority: 0,
-			img: 'react.svg'
+			img: reactIcon
 		},
-		{ name: 'Node', keywords: ['node', 'js', 'java', 'script'], priority: 0, img: 'node.svg' },
-		{ name: 'MongoDB', keywords: ['mongo', 'db', 'database'], priority: 0, img: 'mongodb.svg' },
+		{ name: 'Node', keywords: ['node', 'js', 'java', 'script'], priority: 0, img: nodeIcon },
+		{ name: 'MongoDB', keywords: ['mongo', 'db', 'database'], priority: 0, img: mongodbIcon },
 		{
 			name: 'Postgres',
 			keywords: ['postgres', 'db', 'database', 'sql', 'structured', 'query', 'language'],
 			priority: 0,
-			img: 'postgres.svg'
+			img: postgresIcon
 		},
 		{
 			name: 'MySQL',
 			keywords: ['mysql', 'db', 'database', 'sql', 'structured', 'query', 'language'],
-			img: 'mysql.svg'
+			img: mysqlIcon
 		},
 		{
 			name: 'Express',
 			keywords: ['express', 'js', 'java', 'script', 'backend'],
 			priority: 0,
-			img: 'express.svg'
+			img: expressIcon
 		},
 		{
 			name: 'Next.js',
 			keywords: ['next', 'react', 'js', 'java', 'script', 'frontend', 'backend'],
 			priority: 0,
-			img: 'next.svg'
+			img: nextIcon
 		},
 		{
 			name: 'Angular',
 			keywords: ['angular', 'js', 'java', 'script', 'frontend'],
-			img: 'angular.svg'
+			img: angularIcon
 		},
 		{
 			name: 'Svelte',
 			keywords: ['svelte', 'js', 'java', 'script', 'frontend'],
-			img: 'svelte.svg'
+			img: svelteIcon
 		},
 		{
 			name: 'React Native',
 			keywords: ['react', 'native', 'js', 'java', 'script', 'frontend'],
-			img: 'react.svg'
+			img: reactIcon
 		},
 		{
 			name: 'Expo',
 			keywords: ['exp', 'react', 'native', 'js', 'java', 'script', 'frontend'],
-			img: 'expo.svg'
+			img: expoIcon
 		},
 		{
 			name: 'Redux',
 			keywords: ['redux', 'thunk', 'react', 'library', 'js', 'java', 'script', 'frontend'],
-			img: 'redux.svg'
+			img: reduxIcon
 		},
-		{ name: 'Django', keywords: ['django', 'python', 'py', 'backend'], img: 'django.svg' },
-		{ name: 'Flask', keywords: ['flask', 'python', 'py', 'backend'], img: 'flask.svg' },
+		{ name: 'Django', keywords: ['django', 'python', 'py', 'backend'], img: djangoIcon },
+		{ name: 'Flask', keywords: ['flask', 'python', 'py', 'backend'], img: flaskIcon },
 		{
 			name: 'Jest',
 			keywords: ['jest', 'test', 'ci/cd', 'cicd', 'ci cd', 'quality', 'assurance', 'devops'],
-			img: 'jest.svg'
+			img: jestIcon
 		},
 		{
 			name: 'Tailwind',
 			keywords: ['tailwind', 'css', 'cascading', 'style', 'sheets'],
 			priority: 1,
-			img: 'tailwind.svg'
+			img: tailwindIcon
 		},
 
 		// skills
 		{
 			name: 'Microservices',
 			keywords: ['microservices', 'architecture'],
-			img: 'microservices.svg'
+			img: microservicesIcon
 		},
 		{
 			name: 'AWS',
 			keywords: ['aws', 'amazon', 'web', 'services', 'hosting', 'cloud', 'devops'],
-			img: 'aws.svg'
+			img: awsIcon
 		},
-		{ name: 'GCP', keywords: ['gcp', 'google', 'hosting', 'cloud', 'devops'], img: 'gcp.svg' },
-		{ name: 'Git', keywords: ['git', 'version'], img: 'git.svg' },
+		{ name: 'GCP', keywords: ['gcp', 'google', 'hosting', 'cloud', 'devops'], img: gcpIcon },
+		{ name: 'Git', keywords: ['git', 'version'], img: gitIcon },
 		{
 			name: 'Docker',
 			keywords: ['docker', 'container', 'hosting', 'cloud', 'devops'],
-			img: 'docker.svg'
+			img: dockerIcon
 		},
 		{
 			name: 'Supabase',
 			keywords: ['supabase', 'hosting', 'database', 'devops'],
-			img: 'supabase.svg'
+			img: supabaseIcon
 		},
-		{ name: 'Firebase', keywords: ['firebase', 'hosting', 'cloud', 'devops'], img: 'firebase.svg' },
-		{ name: 'REST', keywords: ['rest', 'api', 'architecture'], img: 'rest.svg' }
+		{ name: 'Firebase', keywords: ['firebase', 'hosting', 'cloud', 'devops'], img: firebaseIcon },
+		{ name: 'REST', keywords: ['rest', 'api', 'architecture'], img: restIcon }
 	];
 
 	$: filteredTechnologies = (() => {
@@ -175,7 +212,7 @@
 	<ul>
 		{#each filteredTechnologies as tech}
 			<li>
-				<img src={`/src/lib/images/technologies/${tech.img || 'javascript.svg'}`} alt={tech.name} />
+				<img src={tech.img} alt={tech.name} />
 				{tech.name}
 			</li>
 		{/each}
