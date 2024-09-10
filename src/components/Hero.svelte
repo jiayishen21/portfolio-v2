@@ -38,7 +38,7 @@
 		</li>
 		<li>
 			<a
-				href="https://docs.google.com/document/d/1NeFtZ0DdNJyEDCvgokSaBmtTMfcsGlyFnj5vOT38ALI/edit?usp=sharing"
+				href="https://docs.google.com/document/d/17sOBr9dSJZmPIPhPYfO4nyDA012DeXvQe4SAf92Ol48/edit?usp=sharing"
 				target="_blank"
 			>
 				<div class="icon-wrapper">
