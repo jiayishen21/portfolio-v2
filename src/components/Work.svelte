@@ -19,7 +19,7 @@
 			<b>SlimeScholars</b>
 			<span>
 				<span class="role-dash"> - </span>
-				<span class="role"> Software Engineer Intern </span>
+				<span class="role"> Founding Engineer </span>
 			</span>
 		</a>
 		<span class="duration"> (May 2024 - Aug 2024) </span>
@@ -31,22 +31,25 @@
 	<div class={showDetails[0] ? 'details' : 'details hide-details'}>
 		<ul>
 			<li>
-				Developed a full-stack web app using <b>MongoDB, Next.js, React</b> to create a platform that
-				revolutionizes education by binding learning with addictive practices found in games.
+				Led backend development of a gamified education platform built with
+				<b>Next.js, React, MongoDB, and AWS,</b> accumulating over <b>10,000</b>
+				monthly users.
 			</li>
 			<li>
-				Created <b>parser</b> for custom markdown geared towards educational content, also handling data
-				analytics of student performance on quiz questions.
+				Created <b>parser</b> for custom markdown for educational content, using
+				<b>google analytics</b> + in-house system to track student engagement on lessons and quizzes.
 			</li>
 			<li>
-				Optimized database storage needs by building scalable <b>Mongoose models</b> and configuring
-				<b>S3</b> for image storage, <b>reducing storage requirements by over 30%.</b>
+				Managed a team of 5 engineers, ensuring robust and efficient code with <b>Jest</b>
+				and <b>benchmarking</b>.
 			</li>
 			<li>
-				Deployed web app using <b>Amazon Elastic Beanstalks</b> to manage <b>loading balancing</b>
-				for
-				<b>EC2 instances,</b>
-				<b>GitHub actions</b> for building and bundling, and <b>Jest</b> for unit testing.
+				Slashed storage needs by <b>30%</b> by optimizing Mongoose models,
+				<b>MongoDB aggregate pipelines</b> and <b>S3</b> as an object store.
+			</li>
+			<li>
+				Developed real-time matchmaking algorithm to gamify learning through competitions, using
+				cron and aggregate queries to match teams of students of similar sizes and skill.
 			</li>
 		</ul>
 	</div>
@@ -68,8 +71,13 @@
 	<div class={showDetails[1] ? 'details' : 'details hide-details'}>
 		<ul>
 			<li>
-				<b>RESTful Go stdlib + Gorilla Mux</b> backend, <b>MySQL</b> and <b>Google Cloud buckets</b>
-				for storage. Used <b>crontab </b> and <b>SendGrid</b> to handle mail notifications.
+				Built an app to track memorable experiences with <b>RESTful Go stdlib</b> backend, using
+				<b>Gorilla Mux</b> for routing, <b>MySQL</b> and <b>Google Cloud Buckets</b> as an object store
+				and CDN.
+			</li>
+			<li>
+				Configured <b>crontab</b> and <b>SendGrid</b> on Google Cloud infrastructure to automate email
+				notifications.
 			</li>
 			<li>
 				Designed a <b>social recommendation algorithm</b> using a <b>social graph</b> to build an effective
@@ -95,13 +103,16 @@
 	<div class={showDetails[2] ? 'details' : 'details hide-details'}>
 		<ul>
 			<li>
-				Built web <b>browser extension</b> using vanilla JavaScript that uses
-				<b>Instagram's internal API</b>
-				on the client side to fetch user data <b>without being rate limited.</b>
+				Built <b>JavaScript</b> browser extension that leverages Instagram’s internal client-side APIs
+				to comply with server-side rate limits.
 			</li>
 			<li>
-				Designed Postgres database schemas, using <b>memoization</b> techniques to reduce storage needs
-				by 80%.
+				Streamlined <b>Postgres</b> queries using Django’s ORM, also cutting data redundancy by
+				<b>80%</b> through diffing techniques.
+			</li>
+			<li>
+				Launched web extension on Product Hunt ranking <b>#8 daily</b> with more than <b>1500</b> daily
+				active users.
 			</li>
 		</ul>
 	</div>

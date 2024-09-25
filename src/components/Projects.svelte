@@ -26,16 +26,17 @@
 	<div class={showDetails[0] ? 'details' : 'details hide-details'}>
 		<ul>
 			<li>
-				<b>Normalized data</b> for supervised machine learning with <b>LightGBM</b> to predict outcome
-				of UFC fights.
+				<b>Regularized data</b> and engineered features for <b>regression</b> algorithm with
+				<b>LightGBM</b> and <b>Flask</b> to predict UFC fight outcomes.
 			</li>
 			<li>
-				Modified the sampling of training data to fix <b>class imbalance</b> that arose from a
-				limited dataset, bringing results that differed by around <b>10% to under 2%</b>.
+				Fixed class imbalance that arose from a limited dataset, bringing results that differed by
+				around <b>10%</b> to under <b>2%</b>, generating 20.3% ROI over 4 months, by modifying
+				training data
 			</li>
 			<li>
-				Wrote deploy scripts for <b>gunicorn</b> to host <b>Flask backend</b> and <b>React</b>
-				frontend using <b>EC2</b> instances.
+				Optimized the model’s <b>AWS</b> deployment, reducing timeouts by 30% by multithreading and adjusting
+				worker counts.
 			</li>
 		</ul>
 	</div>
@@ -51,12 +52,34 @@
 	<div class={showDetails[1] ? 'details' : 'details hide-details'}>
 		<ul>
 			<li>
-				Implemented <b>data compression</b> and memoization to reduce storage by around 3% while maintaining
-				efficiency at runtime.
+				Built full-stack web app with <b>Next.js, React, and MongoDB</b> for an investment club, handling
+				transactions and newsletters.
 			</li>
 			<li>
-				Streamlined investment process using <b>Stripe API</b> and managed <b>2FA</b> using
-				<b>React Email and Resend.</b>
+				Processed membership fees using <b>Stripe API</b> and managed 2FA using React Email and Resend.
+			</li>
+		</ul>
+	</div>
+
+	<h4>
+		<a href="https://jiayishen21.github.io/sorting-algorithms/" target="_blank">
+			Visual Sorting Algorithms
+		</a>
+		<span class="duration">(May 2023 - Aug 2023)</span>
+	</h4>
+	<button on:click={() => toggleDetails(2)} class="toggle-details">
+		{showDetails[2] ? 'Show less' : 'Show more'}
+	</button>
+
+	<div class={showDetails[2] ? 'details' : 'details hide-details'}>
+		<ul>
+			<li>
+				Animated comparisons and swaps of sorting algorithms through DOM manipulation, <b>React</b> hooks,
+				and state variables.
+			</li>
+			<li>
+				Manipulated promises to work around React’s data binding with state variables to allow for
+				timed animations.
 			</li>
 		</ul>
 	</div>

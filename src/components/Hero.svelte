@@ -54,9 +54,9 @@
 		<b>Computer Science</b>
 		at the
 		<b>University of Waterloo.</b>
-		For Summer 2024, I'm working at
+		I'm currently working at
 		<a href="https://www.slimescholars.com/" target="_blank">SlimeScholars</a>
-		as a Software Engineer Intern.
+		as a Founding Engineer.
 	</p>
 </section>
 
