@@ -1,8 +1,37 @@
 <script lang="ts">
 	const projects = [
 		{
+			title: 'Firepit',
+			link: 'https://firepit.link/',
+			duration: '(Feb 2025 - Present)',
+			details: [
+				'Work in progress. We are gonna ship the MVP soon :)',
+				"Built a <b>React</b> + <b>Express</b> webapp for to make co-working and group studying more focused by having users screeshare what they're working on.",
+				'Implemented type-safe clients for socket events and API calls using OpenAPI and quick types, improving reliability and dev experience.',
+				'Conducted <b>user interviews</b> on Firepit to identify pain points in the new user experience and core product. Then, designed and iterated onboarding and core product features based on feedback.'
+			]
+		},
+		{
+			title: 'Vm Text Editor',
+			link: 'https://youtu.be/O6NnQ4tKnq0?si=8MzkvbfJ7qXH6Qyu',
+			duration: '(Dec 2024 - Dec 2024)',
+			details: [
+				'<b>C++</b> final project for CS246E (Object-Oriented Software Development)',
+				'Used command and factory <b>design patterns</b> with <b>RAII</b> to cleanly implement Vim commands and their interactions with each other.',
+				'Wrote shell scripts to create a testing suite to check memory leaks and correctness.'
+			]
+		},
+		{
+			title: 'herizon',
+			link: 'https://herizon.xyz/',
+			duration: '(Sep 2024 - Sep 2024)',
+			details: [
+				'Designed and built landing page for a female entrepreneurship club using <b>Svelte</b>.'
+			]
+		},
+		{
 			title: 'Retrospect',
-			duration: '(Mar 2024 - April 2024)',
+			duration: '(Mar 2024 - Apr 2024)',
 			details: [
 				'Built an app to track memorable experiences with <b>RESTful Go stdlib</b> backend, using <b>Gorilla Mux</b> for routing, <b>MySQL</b> and <b>Google Cloud Buckets</b> as an object store and CDN.',
 				'Configured <b>crontab</b> and <b>SendGrid</b> on Google Cloud infrastructure to automate email notifications.',
