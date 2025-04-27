@@ -1,6 +1,55 @@
 <script lang="ts">
-	const workCount = 3;
-	let showDetails: boolean[] = Array(workCount).fill(false);
+	const projects = [
+		{
+			title: 'Retrospect',
+			duration: '(Mar 2024 - April 2024)',
+			details: [
+				'Built an app to track memorable experiences with <b>RESTful Go stdlib</b> backend, using <b>Gorilla Mux</b> for routing, <b>MySQL</b> and <b>Google Cloud Buckets</b> as an object store and CDN.',
+				'Configured <b>crontab</b> and <b>SendGrid</b> on Google Cloud infrastructure to automate email notifications.',
+				'Designed a <b>social recommendation algorithm</b> using a <b>social graph</b> to build an effective referral program.'
+			]
+		},
+		{
+			title: 'unfollowed.lol',
+			link: 'https://unfollowed.lol/',
+			duration: '(Feb 2024 - Mar 2024)',
+			details: [
+				"Built <b>JavaScript</b> browser extension that leverages Instagram's internal client-side APIs to comply with server-side rate limits.",
+				"Streamlined <b>Postgres</b> queries using Django's ORM, also cutting data redundancy by <b>80%</b> through diffing techniques.",
+				'Launched web extension on Product Hunt ranking <b>#8 daily</b> with more than <b>1500</b> daily active users.'
+			]
+		},
+		{
+			title: 'betUFC',
+			link: 'https://github.com/jazyz/UFCFightPredictor',
+			duration: '(Dec 2023 - Jan 2024)',
+			details: [
+				'<b>Regularized data</b> and engineered features for <b>regression</b> algorithm with <b>LightGBM</b> and <b>Flask</b> to predict UFC fight outcomes.',
+				'Fixed class imbalance that arose from a limited dataset, bringing results that differed by around <b>10%</b> to under <b>2%</b>, generating 20.3% ROI over 4 months, by modifying training data',
+				"Optimized the model's <b>AWS</b> deployment, reducing timeouts by 30% by multithreading and adjusting worker counts."
+			]
+		},
+		{
+			title: 'Marble Investments',
+			link: 'https://www.marbleinvestments.ca/',
+			duration: '(Nov 2023 - Dec 2023)',
+			details: [
+				'Built full-stack web app with <b>Next.js, React, and MongoDB</b> for an investment club, handling transactions and newsletters.',
+				'Processed membership fees using <b>Stripe API</b> and managed 2FA using React Email and Resend.'
+			]
+		},
+		{
+			title: 'Visual Sorting Algorithms',
+			link: 'https://jiayishen21.github.io/sorting-algorithms/',
+			duration: '(May 2023 - Aug 2023)',
+			details: [
+				'Animated comparisons and swaps of sorting algorithms through DOM manipulation, <b>React</b> hooks, and state variables.',
+				"Manipulated promises to work around React's data binding with state variables to allow for timed animations."
+			]
+		}
+	];
+
+	let showDetails: boolean[] = Array(projects.length).fill(false);
 
 	const toggleDetails = (index: number) => {
 		showDetails[index] = !showDetails[index];
@@ -10,79 +59,33 @@
 <section id="projects">
 	<h2>Projects</h2>
 	<p class="disclaimer">
-		Here are some of the <b>memorable</b> or
-		<span class="flashy-text">flashy</span> projects I've worked on. I will try to update this as I work
-		on new things.
+		Here are some of the most <span class="flashy-text">memorable</span> projects I've worked on. I will
+		try to update this as I work on new things.
 	</p>
 
-	<h4>
-		<a href="https://github.com/jazyz/UFCFightPredictor" target="_blank"> betUFC </a>
-		<span class="duration">(Dec 2023 - Jan 2024)</span>
-	</h4>
-	<button on:click={() => toggleDetails(0)} class="toggle-details">
-		{showDetails[0] ? 'Show less' : 'Show more'}
-	</button>
+	{#each projects as project, index}
+		<h4>
+			{#if project.link}
+				<a href={project.link} target="_blank"> {project.title} </a>
+			{:else}
+				<span class="project-title"> {project.title} </span>
+			{/if}
+			<span class="duration">{project.duration}</span>
+		</h4>
+		<button on:click={() => toggleDetails(index)} class="toggle-details">
+			{showDetails[index] ? 'Show less' : 'Show more'}
+		</button>
 
-	<div class={showDetails[0] ? 'details' : 'details hide-details'}>
-		<ul>
-			<li>
-				<b>Regularized data</b> and engineered features for <b>regression</b> algorithm with
-				<b>LightGBM</b> and <b>Flask</b> to predict UFC fight outcomes.
-			</li>
-			<li>
-				Fixed class imbalance that arose from a limited dataset, bringing results that differed by
-				around <b>10%</b> to under <b>2%</b>, generating 20.3% ROI over 4 months, by modifying
-				training data
-			</li>
-			<li>
-				Optimized the model’s <b>AWS</b> deployment, reducing timeouts by 30% by multithreading and adjusting
-				worker counts.
-			</li>
-		</ul>
-	</div>
-
-	<h4>
-		<a href="https://www.marbleinvestments.ca/" target="_blank"> Marble Investments </a>
-		<span class="duration">(Nov 2023 - Dec 2023)</span>
-	</h4>
-	<button on:click={() => toggleDetails(1)} class="toggle-details">
-		{showDetails[1] ? 'Show less' : 'Show more'}
-	</button>
-
-	<div class={showDetails[1] ? 'details' : 'details hide-details'}>
-		<ul>
-			<li>
-				Built full-stack web app with <b>Next.js, React, and MongoDB</b> for an investment club, handling
-				transactions and newsletters.
-			</li>
-			<li>
-				Processed membership fees using <b>Stripe API</b> and managed 2FA using React Email and Resend.
-			</li>
-		</ul>
-	</div>
-
-	<h4>
-		<a href="https://jiayishen21.github.io/sorting-algorithms/" target="_blank">
-			Visual Sorting Algorithms
-		</a>
-		<span class="duration">(May 2023 - Aug 2023)</span>
-	</h4>
-	<button on:click={() => toggleDetails(2)} class="toggle-details">
-		{showDetails[2] ? 'Show less' : 'Show more'}
-	</button>
-
-	<div class={showDetails[2] ? 'details' : 'details hide-details'}>
-		<ul>
-			<li>
-				Animated comparisons and swaps of sorting algorithms through DOM manipulation, <b>React</b> hooks,
-				and state variables.
-			</li>
-			<li>
-				Manipulated promises to work around React’s data binding with state variables to allow for
-				timed animations.
-			</li>
-		</ul>
-	</div>
+		<div class={showDetails[index] ? 'details' : 'details hide-details'}>
+			<ul>
+				{#each project.details as detail}
+					<li>
+						{@html detail}
+					</li>
+				{/each}
+			</ul>
+		</div>
+	{/each}
 </section>
 
 <style>
@@ -211,5 +214,13 @@
 			font-size: 1.1rem;
 			line-height: 1.5rem;
 		}
+	}
+
+	.project-title {
+		font-size: 1.9rem;
+		font-weight: bold;
+		font-family: var(--font-fancy);
+		font-style: italic;
+		transition: 0.5s ease-out;
 	}
 </style>

@@ -1,6 +1,34 @@
 <script lang="ts">
-	const projectCount = 3;
-	let showDetails: boolean[] = Array(projectCount).fill(false);
+	const workExperiences = [
+		{
+			company: 'Wispr Flow',
+			link: 'https://wisprflow.ai/',
+			role: 'Software Engineer',
+			duration: '(Jan 2025 - Present)',
+			details: [
+				'Increased dictation accuracy through context awareness by extracting relevant text with native subprocesses (<b>Swift and C#</b>)',
+				'Improved automatic speech recognition (ASR) and formatting models by collecting and classifying data on text-editing patterns across users, using string matching algorithms for plaintext, HTML, and markdown.',
+				'Decreasing <b>crash rate from 6% to 2%</b> by building an internal devtool for observability, improving logging through stack traces, killing orphaned processes, reinforcing the CI/CD pipeline, and working with customers to identify pain points.',
+				'Documented complex logic and processes, also wrote scripts to simplify processes like migrations, testing, and the release pipeline.',
+				'Generated monthly and yearly roundups, catalyzing a month of <b>20% WAU growth</b>, by aggregating user data with <b>SQL</b>, templating emails with Jinja, and creating shareable OpenGraph metadata with <b>Next.js</b>.'
+			]
+		},
+		{
+			company: 'SlimeScholars',
+			link: 'https://www.slimescholars.com/',
+			role: 'Founding Engineer',
+			duration: '(May 2024 - Aug 2024)',
+			details: [
+				'Led backend development of a gamified education platform built with <b>Next.js, React, MongoDB, and AWS</b>.',
+				'Created <b>parser</b> for custom markdown for educational content, using <b>google analytics</b> + in-house system to track student engagement on lessons and quizzes.',
+				'Managed a team of 5 engineers, ensuring robust and efficient code with <b>Jest</b> and <b>benchmarking</b>.',
+				'Slashed storage needs by <b>30%</b> by optimizing Mongoose models, <b>MongoDB aggregate pipelines</b> and <b>S3</b> as an object store.',
+				'Developed real-time matchmaking algorithm to gamify learning through competitions, using cron and aggregate queries to match teams of students of similar sizes and skill.'
+			]
+		}
+	];
+
+	let showDetails: boolean[] = Array(workExperiences.length).fill(false);
 
 	const toggleDetails = (index: number) => {
 		showDetails[index] = !showDetails[index];
@@ -14,108 +42,31 @@
 		updated.
 	</p>
 
-	<h4>
-		<a href="https://www.slimescholars.com/" target="_blank">
-			<b>SlimeScholars</b>
-			<span>
-				<span class="role-dash"> - </span>
-				<span class="role"> Founding Engineer </span>
-			</span>
-		</a>
-		<span class="duration"> (May 2024 - Aug 2024) </span>
-	</h4>
-	<button on:click={() => toggleDetails(0)} class="toggle-details">
-		{showDetails[0] ? 'Show less' : 'Show more'}
-	</button>
+	{#each workExperiences as experience, index}
+		<h4>
+			<a href={experience.link} target="_blank">
+				<b>{experience.company}</b>
+				<span>
+					<span class="role-dash"> - </span>
+					<span class="role"> {experience.role} </span>
+				</span>
+			</a>
+			<span class="duration"> {experience.duration} </span>
+		</h4>
+		<button on:click={() => toggleDetails(index)} class="toggle-details">
+			{showDetails[index] ? 'Show less' : 'Show more'}
+		</button>
 
-	<div class={showDetails[0] ? 'details' : 'details hide-details'}>
-		<ul>
-			<li>
-				Led backend development of a gamified education platform built with
-				<b>Next.js, React, MongoDB, and AWS,</b> accumulating over <b>10,000</b>
-				monthly users.
-			</li>
-			<li>
-				Created <b>parser</b> for custom markdown for educational content, using
-				<b>google analytics</b> + in-house system to track student engagement on lessons and quizzes.
-			</li>
-			<li>
-				Managed a team of 5 engineers, ensuring robust and efficient code with <b>Jest</b>
-				and <b>benchmarking</b>.
-			</li>
-			<li>
-				Slashed storage needs by <b>30%</b> by optimizing Mongoose models,
-				<b>MongoDB aggregate pipelines</b> and <b>S3</b> as an object store.
-			</li>
-			<li>
-				Developed real-time matchmaking algorithm to gamify learning through competitions, using
-				cron and aggregate queries to match teams of students of similar sizes and skill.
-			</li>
-		</ul>
-	</div>
-
-	<h4>
-		<a href="https://www.retrospect.space/" target="_blank">
-			<b>Retrospect (Tenacity Labs)</b>
-			<span>
-				<span class="role-dash"> - </span>
-				<span class="role"> Backend Developer </span>
-			</span>
-		</a>
-		<span class="duration">(Mar 2024 - April 2024)</span>
-	</h4>
-	<button on:click={() => toggleDetails(1)} class="toggle-details">
-		{showDetails[1] ? 'Show less' : 'Show more'}
-	</button>
-
-	<div class={showDetails[1] ? 'details' : 'details hide-details'}>
-		<ul>
-			<li>
-				Built an app to track memorable experiences with <b>RESTful Go stdlib</b> backend, using
-				<b>Gorilla Mux</b> for routing, <b>MySQL</b> and <b>Google Cloud Buckets</b> as an object store
-				and CDN.
-			</li>
-			<li>
-				Configured <b>crontab</b> and <b>SendGrid</b> on Google Cloud infrastructure to automate email
-				notifications.
-			</li>
-			<li>
-				Designed a <b>social recommendation algorithm</b> using a <b>social graph</b> to build an effective
-				referral program.
-			</li>
-		</ul>
-	</div>
-
-	<h4>
-		<a href="https://unfollowed.lol/" target="_blank">
-			<b>unfollowed.lol (Tenacity Labs)</b>
-			<span>
-				<span class="role-dash"> - </span>
-				<span class="role"> Software Engineer </span>
-			</span>
-		</a>
-		<span class="duration">(Feb 2024 - Mar 2024)</span>
-	</h4>
-	<button on:click={() => toggleDetails(2)} class="toggle-details">
-		{showDetails[2] ? 'Show less' : 'Show more'}
-	</button>
-
-	<div class={showDetails[2] ? 'details' : 'details hide-details'}>
-		<ul>
-			<li>
-				Built <b>JavaScript</b> browser extension that leverages Instagram’s internal client-side APIs
-				to comply with server-side rate limits.
-			</li>
-			<li>
-				Streamlined <b>Postgres</b> queries using Django’s ORM, also cutting data redundancy by
-				<b>80%</b> through diffing techniques.
-			</li>
-			<li>
-				Launched web extension on Product Hunt ranking <b>#8 daily</b> with more than <b>1500</b> daily
-				active users.
-			</li>
-		</ul>
-	</div>
+		<div class={showDetails[index] ? 'details' : 'details hide-details'}>
+			<ul>
+				{#each experience.details as detail}
+					<li>
+						{@html detail}
+					</li>
+				{/each}
+			</ul>
+		</div>
+	{/each}
 </section>
 
 <style>

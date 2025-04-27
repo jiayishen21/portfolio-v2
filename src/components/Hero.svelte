@@ -55,8 +55,8 @@
 		at the
 		<b>University of Waterloo.</b>
 		I'm currently working at
-		<a href="https://www.slimescholars.com/" target="_blank">SlimeScholars</a>
-		as a Founding Engineer.
+		<a href="https://wisprflow.ai/" target="_blank">Wispr Flow</a>
+		as a Software Engineer.
 	</p>
 </section>
 
