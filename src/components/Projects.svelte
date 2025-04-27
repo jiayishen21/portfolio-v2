@@ -6,9 +6,9 @@
 			duration: '(Feb 2025 - Present)',
 			details: [
 				'Work in progress. We are gonna ship the MVP soon :)',
-				"Built a <b>React</b> + <b>Express</b> webapp for to make co-working and group studying more focused by having users screeshare what they're working on.",
+				"Built a <b>React</b> + <b>Express</b> webapp to make coworking more focused by having users screenshare what they're working on.",
 				'Implemented type-safe clients for socket events and API calls using OpenAPI and quick types, improving reliability and dev experience.',
-				'Conducted <b>user interviews</b> on Firepit to identify pain points in the new user experience and core product. Then, designed and iterated onboarding and core product features based on feedback.'
+				'Conducted <b>user interviews</b> on Firepit to identify pain points in the new user experience and core product. Then, designed and iterated onboarding flow and core product features based on feedback.'
 			]
 		},
 		{
@@ -18,7 +18,7 @@
 			details: [
 				'<b>C++</b> final project for CS246E (Object-Oriented Software Development)',
 				'Used command and factory <b>design patterns</b> with <b>RAII</b> to cleanly implement Vim commands and their interactions with each other.',
-				'Wrote shell scripts to create a testing suite to check memory leaks and correctness.'
+				'Created a test suite to check memory leaks and correctness with shell scripts.'
 			]
 		},
 		{
