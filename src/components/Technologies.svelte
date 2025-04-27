@@ -7,6 +7,7 @@
 	import htmlIcon from '$lib/images/technologies/html.svg';
 	import cssIcon from '$lib/images/technologies/css.svg';
 	import cIcon from '$lib/images/technologies/c.svg';
+	import csharpIcon from '$lib/images/technologies/csharp.svg';
 	import cppIcon from '$lib/images/technologies/c++.svg';
 	import javaIcon from '$lib/images/technologies/java.svg';
 	import goIcon from '$lib/images/technologies/go.svg';
@@ -57,6 +58,7 @@
 		{ name: 'HTML', keywords: ['html', 'hyper', 'html5', 'language'], img: htmlIcon },
 		{ name: 'CSS', keywords: ['css', 'cascading', 'style', 'sheets', 'language'], img: cssIcon },
 		{ name: 'C', keywords: ['c', 'language'], img: cIcon },
+		{ name: 'C#', keywords: ['c#', 'language'], img: csharpIcon },
 		{ name: 'C++', keywords: ['c++', 'cpp', 'language'], priority: 1, img: cppIcon },
 		{ name: 'Java', keywords: ['java', 'language'], img: javaIcon },
 		{ name: 'Go', keywords: ['go', 'language'], priority: 1, img: goIcon },
